@@ -8,7 +8,7 @@ st.divider()
 input_file = st.file_uploader("Upload Batch File")
 
 if st.button("Predict Batch Intent", type="primary"):
-    response = requests.post("http://127.0.0.1:8000/predict-batch",files={"file": input_file})
+    response = requests.post("https://banking77-intent-classifier.onrender.com/predict-batch",files={"file": input_file})
     result = response.json()
     st.dataframe(result)
     

@@ -10,7 +10,7 @@ text = st.text_area("Enter support ticket text")
 
 
 if st.button("Predict Intent", type="primary"):
-    response = requests.post("http://127.0.0.1:8000/predict",json={"text": text})
+    response = requests.post("https://banking77-intent-classifier.onrender.com/predict",json={"text": text})
     result = response.json()
     confidence = result['confidence']
     if confidence > 0.6:
