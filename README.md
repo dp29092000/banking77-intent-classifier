@@ -1,6 +1,6 @@
 # 🏦 Banking77 Intent Classifier
 
-An end-to-end NLP system that automatically classifies customer support tickets into 77 banking intent categories — built to simulate how fintech companies route support tickets automatically.
+An end-to-end NLP system that automatically classifies customer support tickets into 77 banking intent categories - built to simulate how fintech companies route support tickets automatically.
 
 ---
 
@@ -13,15 +13,8 @@ The system is built on the **Banking77** dataset — a benchmark dataset of 13,0
 ---
 
 ## 🏗️ Architecture
-User Input (Ticket Text)
-↓
-Streamlit Frontend
-↓
-FastAPI Backend (Render)
-↓
-TF-IDF + Logistic Regression Pipeline
-↓
-Predicted Intent + Confidence Score
+
+User Input (Ticket Text) → Streamlit Frontend → FastAPI Backend (Render) → TF-IDF Pipeline → Predicted Intent + Confidence Score
 
 ---
 
@@ -32,7 +25,7 @@ Predicted Intent + Confidence Score
 | TF-IDF + Logistic Regression | 86% | 0.86 |
 | Fine-tuned DistilBERT | 91% | 0.91 |
 
-> DistilBERT was fine-tuned locally on the Banking77 dataset. The deployed API uses the TF-IDF pipeline for lightweight serving — a common production tradeoff between model performance and infrastructure cost.
+> DistilBERT was fine-tuned locally on the Banking77 dataset. The deployed API uses the TF-IDF pipeline for lightweight serving - a common production tradeoff between model performance and infrastructure cost.
 
 ---
 
@@ -47,17 +40,18 @@ Predicted Intent + Confidence Score
 ---
 
 ## 📁 Project Structure
-banking77-intent-classifier/
-├── pages/
-│   ├── 1_EDA.py
-│   ├── 2_Model_Comparison.py
-│   ├── 3_Single_Prediction.py
-│   └── 4_Batch_Prediction.py
-├── app.py                  # Streamlit entry point
-├── main.py                 # FastAPI backend
-├── tfidf_pipeline.pkl      # Trained TF-IDF pipeline
-├── requirements.txt
-└── README.md
+
+    banking77-intent-classifier/
+    ├── pages/
+    │   ├── 1_EDA.py
+    │   ├── 2_Model_Comparison.py
+    │   ├── 3_Single_Prediction.py
+    │   └── 4_Batch_Prediction.py
+    ├── app.py
+    ├── main.py
+    ├── tfidf_pipeline.pkl
+    ├── requirements.txt
+    └── README.md
 
 ---
 
@@ -99,7 +93,9 @@ streamlit run app.py
 | FastAPI Backend | https://banking77-intent-classifier.onrender.com/docs |
 | Streamlit App | https://banking77-intent-classifier-gxvu9z7bbgsdffjjhx9tki.streamlit.app/ |
 
+---
+
 ## Author
 **Prasanna D**  
 IIT Gandhinagar (B.Tech, 2022)  
-Incoming MS Applied Machine Learning — University of Maryland, Fall 2026
+Incoming MS Applied Machine Learning - University of Maryland, Fall 2026
