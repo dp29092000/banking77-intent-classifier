@@ -8,7 +8,7 @@ import io
 app = FastAPI()
 
 # Load model and tokenizer
-model_path = "banking77_model"
+model_path = "dp29092k/banking77-intent-classifier"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = DistilBertForSequenceClassification.from_pretrained(model_path)
 model.eval()
